@@ -1,7 +1,9 @@
+import { Info } from "./_components/info";
+
 const OrganizationIdPage = () => {
     return (
-        <div>
-
+        <div className="w-full mb-20">
+            <Info />
         </div>
     )
 }
