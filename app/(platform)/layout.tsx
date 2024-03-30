@@ -2,6 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
 import { ModalProvider } from "@/components/providers/modal-provider";
+import { QueryProvider } from "@/components/providers/query-provider";
 
 
 const PlatformLayout = ({
@@ -11,9 +12,11 @@ const PlatformLayout = ({
 }) => {
     return (
         <ClerkProvider>
-            <Toaster />
-            <ModalProvider />
-            {children}
+            <QueryProvider>
+                <Toaster />
+                <ModalProvider />
+                {children}
+            </QueryProvider>
         </ClerkProvider>
     )
 }
