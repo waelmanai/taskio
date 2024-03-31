@@ -10,6 +10,7 @@ import { CardWithList } from "@/types";
 
 import { Header } from "./header";
 import { Description } from "./descriptions";
+import { Actions } from "./actions";
 
 
 export const CardModal = () => {
@@ -42,6 +43,10 @@ export const CardModal = () => {
                             }
                         </div>
                     </div>
+                    {!cardData
+                        ? <Actions.Skeleton />
+                        : <Actions data={cardData} />
+                    }
                 </div>
             </DialogContent>
         </Dialog>
